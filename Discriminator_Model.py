@@ -50,9 +50,9 @@ class FCNet():
             conv4 = layers.BatchNormalization(axis=axis)(conv4)
         conv4 = layers.Activation('relu')(conv4)
 
-        conv_final = layers.Flatten(conv4)
+        conv_final = layers.Flatten()(conv4)
         conv_final = layers.Dense(self._output_c)(conv_final)
-        conv_final = layers.Activation('Softmax')(conv_final)
+        conv_final = layers.Activation('softmax')(conv_final)
 
         # Model integration
         model = models.Model(inputs, conv_final, name="FCNet")
