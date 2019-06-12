@@ -2,7 +2,7 @@
 '''
 TODO:
     Discriminator model of the domain adversarial network
-    Full-convolutional network
+    Full-convolution network
     or any other classification model
 '''
 __author__ = 'MoleImg'
